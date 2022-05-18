@@ -3106,6 +3106,7 @@
         const claimListMerkleTree = new MerkleTree(claimListHashes, keccak256, { sort: true });
         let proof = claimListMerkleTree.getProof(claimListHashes[indexOfUser]);
         proof = proof.map((item: any) => '0x' + item.data.toString('hex'));
+        console.log("PROOF HERE", proof);
         return proof
     }
 
